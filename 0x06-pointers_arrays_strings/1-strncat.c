@@ -1,15 +1,15 @@
 #include "main.h"
-#include <stdio.h>
 #include <string.h>
 
 /**
- * _strcat - function to concatenate two strings
- * @dest: the first string and the destination
- * @src: the string to be appended
- * Return:pointers to dest
+ * _strncat - A function to concantate two strings
+ * @dest: the destination string
+ * @src:Source string
+ * @n:the integers stating times
+ * Return: always dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int index = 0, dest_len = 0;
 
