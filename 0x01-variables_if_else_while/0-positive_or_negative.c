@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 /**
  * main - a program to identify if number is positve or negative or zero
@@ -7,8 +9,10 @@
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
 	if (n == 0)
 	{
 	printf("%d is zero", n);
@@ -19,6 +23,7 @@ int main(void)
 	}
 	else
 	printf("%d is negative", n);
+	printf("\n");
 	return (0);
 }
 
