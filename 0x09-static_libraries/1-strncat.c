@@ -3,7 +3,8 @@
 /**
  * _strncat - concatenation of strings
  * @dest:the destination
- * @src:the source
+ * @src:the sourc
+ * @n:the n
  * Return:nothing
  */
 
@@ -18,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 	a++;
 	}
 	b = 0;
-	while (src[b] != '\0')
+	while (b < n && src[b] != '\0')
 	{
 	dest[a] = src[b];
 	a++;
