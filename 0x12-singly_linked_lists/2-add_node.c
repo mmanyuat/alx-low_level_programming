@@ -4,7 +4,7 @@
 
 /**
  * add_node - function to add new node to the begining of the linked list
- * @header:the ptr
+ * @head:the ptr
  * @str:the string data
  * Return:the address of the new elment
  */
@@ -12,7 +12,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
-	
+
 	new_node = malloc(sizeof(list_t));
 	new_node->str = strdup(str);
 	new_node->len = strlen(str);
