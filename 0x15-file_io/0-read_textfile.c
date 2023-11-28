@@ -12,14 +12,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp;
 	size_t count = 0;
-	char buffer[BUFSIZ];
+	int chara;
 
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 	return (0);
-	while (fgets(buffer, sizeof(buffer), fp) != NULL && count < letters)
+	while ((chara = fgetc(fp)) != EOF && count < letters)
 	{
-	puts(buffer);
+	putc(chara, stdout);
 	count++;
 	}
 	fclose(fp);
